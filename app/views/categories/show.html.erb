@@ -1,0 +1,5 @@
+All related posts for: <%=@category.name%> <br>
+<% @category.posts.each do |post| %>
+  <%= link_to post.title, post %> <br>
+  <%= post.content %>
+<%end%>
