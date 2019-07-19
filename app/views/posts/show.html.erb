@@ -1,1 +1,12 @@
-
+<%=@post.title%> <br>
+<%=@post.content%> <br>
+Category :
+<% @post.categories.each do |category| %>
+  <%= category.name %>
+<%end%>
+<% @post.comments.each do |comment| %>
+  <%= comment.content %>
+<%end%>
+<% @post.users.uniq.each do |user| %>
+  <%= link_to user.username, user %>
+<%end%>
